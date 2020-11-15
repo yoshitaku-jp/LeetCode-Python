@@ -17,20 +17,21 @@ class Solution:
 
         head_list = []
         while True:
-            if head.next is not None :
-                head_list.append(head.val)
-                head = head.next
-            elif head.next is None :
+            if head.next is None :
                 head_list.append(head.val)
                 break
+            elif head.next is not None :
+                head_list.append(head.val)
+                head = head.next
 
-        m = 0
-        n = len(head_list)-1
+        j = len(head_list)-1
         for i in range(len(head_list)):
-            if head_list[m] != head_list[n]:
+            if head_list[i] != head_list[j]:
                 return False
-            m += 1
-            n -= 1
+            i += 1
+            j -= 1
+            if i > j == True:
+                break
 
         return True
 
