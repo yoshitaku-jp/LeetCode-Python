@@ -5,8 +5,15 @@
 #
 
 # @lc code=start
+from typing import List
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
-# @lc code=end
+        for i, val in enumerate(nums):
+            for j in range(len(nums) - 1, i, -1):
+                if target == (val + nums[j]):
+                    return [i, j]
 
+
+# @lc code=end
