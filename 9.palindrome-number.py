@@ -7,6 +7,12 @@
 # @lc code=start
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        
-# @lc code=end
+        tmp = list(str(x))
+        for i in tmp:
+            for j in reversed(tmp):
+                if i != j:
+                    return False
+        return True
 
+
+# @lc code=end
